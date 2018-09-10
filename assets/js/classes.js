@@ -56,32 +56,40 @@ class Player extends GameEntity{
             // Resetting the game
             this.gameReset();
     }
+      // Reset the game after victory
+      gameReset(){
+        if (this.victory && !this.offScreenTopDownY){
+            this.victory = false;
+        }
+    }
     // Update the status of the game for the player
     update(dt){
         super.update();
         /**
          * Check if the player is off the screen, not moving and has not already won
          */
+
         if (this.offScreenTopDownY && !this.inMovement && !this.victory){
             console.log('Congratulation you won');
             this.victory = true;
+            // Reset the player position
+            this.resetPlayerPosition();
         }
     }
-
-    // Reset the game after victory
-    gameReset(){
-        if (this.victory && !this.offScreenTopDownY){
-            this.victory = false;
-            this.Player = 5;
-        }
+    /**
+     * Reset the player
+     */
+    resetPlayerPosition(){
+        this.y = 5;
     }
     // HandleInput
     handleInput(input){
         switch(input) {
             case 'leftMove':
+            // control the movement of the player when at the edge
                 this.x = this.x > 0 ? this.x - 1 : this.x;
             break;
-            case 'upMove':
+            case 'topMove':
                 this.y = this.y > 0 ? this.y - 1 : this.y;
                 break;
             case 'rightMove':
@@ -102,11 +110,11 @@ class Enemy extends GameEntity{
     constructor(x, y, speed){
         //To enherity
         super();
-        //Create the sprite (bugs)
+        //Generate the sprite (bugs)
         this.sprite += 'enemy-bug.png';
-        this.x = Math.random() * - 4;
+        this.x = x;
         this.y = y;
-        this.speed = Math.random() * 6;
+        this.speed = Math.random() * 500;
     }
     update(dt){
         // Enherit the update function the main class
@@ -117,7 +125,7 @@ class Enemy extends GameEntity{
         }else {
             // dt = delta in time
             //We could use a random generation of the dt to get the bugs moving at a diff pace.
-            this.x += dt;
+            this.x += Math.random() / dt * 0.002;
             this.speed += this.speed + dt;
         }
     }

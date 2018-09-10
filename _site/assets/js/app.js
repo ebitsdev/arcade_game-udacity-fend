@@ -41,7 +41,7 @@ let allEnemies = [...Array(3)].map((_, i)=> new Enemy(0, i + 1));
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'leftMove',
-        38: 'upMove',
+        38: 'topMove',
         39: 'rightMove',
         40: 'downMove'
     };
