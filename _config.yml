@@ -1,0 +1,29 @@
+title: Classic Arcade Game by Emmanuel Bamba
+email: ebamba@bitsnshine.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Classic Arcade Game project for the Google-Udacity Nanodegree
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "ebits.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter: ebamba
+github: ebitsdev
+linkedin: https://www.linkedin.com/in/emmanuelbamba/
+gitrepo: classic_arcade_game
+host: localhost
+port: 4015
+
+# Build settings
+markdown: kramdown
+plugins:
+  # - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
