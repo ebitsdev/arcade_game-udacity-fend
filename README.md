@@ -1,7 +1,5 @@
-Frontend Nanodegree Arcade Game
+Udacity Frontend Nanodegree Arcade Game
 ===============================
-
-# Udacity Front-End Development Classic Arcade Game Project
 This project is about developing the classic arcade game, where player needs to reach the water without colliding with the enemey bugs in constant move.
 
 ## How to play this game:
