@@ -70,10 +70,10 @@ function addGameInstructions(){
 
     const container = document.querySelector('.main-content');
     const gameInstructions = document.querySelector('.instructions');
-    const gameInstructionsContent = '<h1>How to play this game</h1><p>How to play this game:</p>'+
-    '<p>Use the left and right arrow keys on the keyboard to move left or right.</p>'+
-    '<p>Use the up and down keys to move the player up or down.</p>'+
-    '<p>You win when you reach the top of the board, when you get to the water</p>'
+    const gameInstructionsContent = '<h1>How to play this game</h1>'+
+    '<p><em>Use the left and right arrow keys to move left or right.</em></p>'+
+    '<p><em>Use the up and down keys to move the player up or down.</em></p>'+
+    '<p><em>You win when you reach the top of the board, when you get to the water.</em></p>'
     gameInstructions.innerHTML = gameInstructionsContent;
     container.appendChild(gameInstructions);
 }
