@@ -20,8 +20,8 @@ body {
 #modal {
     display: flex;
     position: absolute;
-    top: 5.7rem;
-    width: 442px;
+    top: 5.8rem;
+    width: 447px;
     height: 475px;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
