@@ -28,7 +28,7 @@ document.body.addEventListener('click', closeModal, false);
 // Player.handleInput() method. You don't need to modify this.
 
 document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
+    const allowedKeys = {
         37: 'leftMove',
         38: 'topMove',
         39: 'rightMove',
