@@ -9,13 +9,15 @@ body {
     display: flex;
     justify-content: center;
 }
-
+.instructions{
+  padding: 20px;
+  text-align: left;
+}
 #modal {
-    margin-left: -45px !important;
     display: flex;
     position: absolute;
-    top: 3.7rem;
-    width: 430px;
+    top: 8.7rem;
+    width: 441px;
     height: 475px;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;

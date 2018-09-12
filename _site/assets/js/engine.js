@@ -19,15 +19,27 @@ var Engine = (function(global) {
      * set the canvas elements height/width and add it to the DOM.
      */
     var doc = global.document,
+        mainContent = doc.createElement('div'),
+        footer = doc.createElement('footer'),
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
+        mainContent.classList.add('main-content');
+
+    // Set game title
+    addGameTitle(mainContent);
 
     canvas.width = 505;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
 
+    doc.body.appendChild(mainContent);
+    mainContent.appendChild(canvas);
+    // Add instructions about how to play the game
+    addGameInstructions();
+    // Add the footer element under the instructions
+    addFooter(footer);
+    mainContent.appendChild(footer);
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */

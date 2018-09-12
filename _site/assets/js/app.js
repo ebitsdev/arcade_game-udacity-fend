@@ -42,11 +42,11 @@ function createModal(){
   const modalContainerHTMLString = '<div id="modalcontent"><div id="closebutton">+</div><div class="message-content">Congratulations, you won!</div></div>';
   const modalContainer = document.createElement('div');
   const container = document.querySelector('body');
-  const canvas = document.querySelector('canvas');
+  const mainContainer = document.querySelector('.main-content');
 
   modalContainer.setAttribute("id", "modal");
   modalContainer.innerHTML = modalContainerHTMLString;
-  container.insertBefore(modalContainer, canvas);
+  container.insertBefore(modalContainer, mainContainer);
 }
 // Close modal or modal container
 function closeModal(ev){
@@ -56,4 +56,32 @@ function closeModal(ev){
   if ( ev.target === modal || ev.target === modalCont || ev.target === closebtn){
       modal.remove();
   }
+}
+function addGameTitle(el){
+  const headerTxt = 'Classic Arcade Game';
+  const header = document.createElement('h1');
+  header.classList.add('header-title');
+  header.innerText = headerTxt;
+  el.appendChild(header);
+}
+
+// Add game instructions for players
+function addGameInstructions(){
+
+    const container = document.querySelector('.main-content');
+    const gameInstructions = document.querySelector('.instructions');
+    const gameInstructionsContent = '<h1>How to play this game</h1><p>How to play this game:</p>'+
+    '<p>Use the left and right arrow keys on the keyboard to move left or right.</p>'+
+    '<p>Use the up and down keys to move the player up or down.</p>'+
+    '<p>You win when you reach the top of the board, when you get to the water</p>'
+    gameInstructions.innerHTML = gameInstructionsContent;
+    container.appendChild(gameInstructions);
+}
+// Add footer to the game
+function addFooter(el){
+const footerContent = '<div class="footer-main"><ul><li><a href="https://www.github.com/ebitsdev"><i class="fa fa-github"></i></a></li>'+
+'<li><a href="https://www.twitter.com/ebamba"><i class="fa fa-twitter"></i></a></li><li><a href="https://www.linkedin.com/in/emmanuelbamba/"><i class="fa fa-linkedin"></i></a></li>'+
+'</ul></div>';
+el.classList.add('.footer');
+el.innerHTML = footerContent;
 }
