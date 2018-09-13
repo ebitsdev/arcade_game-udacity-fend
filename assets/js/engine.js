@@ -30,8 +30,9 @@ var Engine = (function(global) {
     // Set game title
     addGameTitle(mainContent);
 
-    canvas.width = 505;
-    canvas.height = 606;
+    const ratioCalculator = 3.37;
+    canvas.width = canvas.height * ratioCalculator;
+    canvas.height = canvas.width * 1.2;
 
     doc.body.appendChild(mainContent);
     mainContent.appendChild(canvas);

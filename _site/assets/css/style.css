@@ -108,16 +108,16 @@ body {
 
     #closebutton {
       position: absolute;
-      top: 3.2rem;
+      top: 6.81rem;
       font-size: 50px;
       transform: rotate(45deg);
-      right: 4.2rem;
+      right: 4.4rem;
       font-weight: 600;
     }
 
     #modal {
-      width: 25rem;
-      height: 25rem;
+      width: 22rem;
+      height: 30rem;
     }
 
     #modalcontent {
